@@ -3,7 +3,6 @@ import {
   NgZone, OnDestroy, AnimationTransitionEvent} from '@angular/core';
 import {Toast} from './toast';
 import {ToastOptions} from './toast-options';
-import {DomSanitizer} from '@angular/platform-browser';
 import 'rxjs/add/operator/first';
 import {Subject} from 'rxjs/Subject';
 import {Observable} from 'rxjs/Observable';
@@ -111,8 +110,7 @@ export class ToastContainer implements OnDestroy {
   private _onEnter: Subject<any> = new Subject();
   private _onExit: Subject<any> = new Subject();
 
-  constructor(private sanitizer: DomSanitizer,
-              private cdr: ChangeDetectorRef,
+  constructor(private cdr: ChangeDetectorRef,
               private _zone: NgZone,
               options: ToastOptions)
   {

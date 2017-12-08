@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ToastOptions = (function () {
     function ToastOptions() {
-        this.positionClass = 'toast-top-right';
+        this.positionClass = 'toast-top-center';
         this.maxShown = 5;
         this.newestOnTop = false;
         this.animate = 'fade';
